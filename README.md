@@ -1,36 +1,192 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rick and Morty App
 
-## Getting Started
+Aplicación desarrollada con Next.js + TypeScript utilizando la API GraphQL de Rick and Morty.
 
-First, run the development server:
+---
+
+# Tecnologías
+
+- Next.js 15
+- React
+- TypeScript
+- TailwindCSS
+- Apollo Client
+- GraphQL
+- Zustand
+- Recharts
+
+---
+
+# Instalación
+
+## 1. Clonar repositorio
+
+```bash
+git clone <TU_REPOSITORIO>
+```
+
+## 2. Entrar al proyecto
+
+```bash
+cd rick-morty-app
+```
+
+## 3. Instalar dependencias
+
+```bash
+npm install
+```
+
+## 4. Crear variables de entorno
+
+Crear archivo:
+
+```bash
+.env.local
+```
+
+Agregar:
+
+```env
+NEXT_PUBLIC_GRAPHQL_URL=https://rickandmortyapi.com/graphql
+```
+
+## 5. Ejecutar proyecto
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```txt
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# Funcionalidades
 
-To learn more about Next.js, take a look at the following resources:
+- Búsqueda de personajes
+- Vista grid/list
+- Detalle de personaje
+- Favoritos persistentes
+- Máximo 5 favoritos
+- Reordenamiento de favoritos
+- Gráfica por especies
+- Responsive design
+- Loading states
+- Error handling
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Estructura del proyecto
 
-## Deploy on Vercel
+```txt
+src/
+│
+├── app/
+│   ├── character/
+│   ├── favorites/
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── loading.tsx
+│   ├── error.tsx
+│   └── page.tsx
+│
+├── components/
+│   ├── character/
+│   ├── charts/
+│   ├── favorites/
+│   ├── layout/
+│   ├── search/
+│   ├── shared/
+│   └── ui/
+│
+├── graphql/
+│   ├── queries/
+│   └── client.ts
+│
+├── hooks/
+├── store/
+├── utils/
+├── lib/
+├── types/
+└── constants/
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Arquitectura
+
+## Server Components
+
+Se utilizan para:
+
+- SSR
+- Fetch inicial
+- Queries GraphQL
+- Renderizado principal
+
+## Client Components
+
+Se utilizan únicamente para:
+
+- interacción del usuario
+- favoritos
+- búsqueda
+- charts
+- estado global
+
+---
+
+# Estado global
+
+Se utiliza Zustand para:
+
+- favoritos
+- persistencia
+- reorder
+
+---
+
+# API
+
+```txt
+https://rickandmortyapi.com/graphql
+```
+
+---
+
+# Scripts
+
+## Desarrollo
+
+```bash
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Producción
+
+```bash
+npm run start
+```
+
+---
+
+# Objetivo
+
+Prueba técnica Frontend desarrollada con:
+
+- Next.js
+- TypeScript
+- GraphQL
+- Zustand
+- Arquitectura limpia
+- Buenas prácticas modernas
