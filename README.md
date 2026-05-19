@@ -22,7 +22,7 @@ Aplicación desarrollada con Next.js + TypeScript utilizando la API GraphQL de R
 ## 1. Clonar repositorio
 
 ```bash
-git clone <TU_REPOSITORIO>
+git clone https://github.com/Uri-007/CBIM-prueba
 ```
 
 ## 2. Entrar al proyecto
